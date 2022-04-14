@@ -4,12 +4,23 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import CustomLink from '../CustomLink/CustomLink';
 import { MenuIcon, ShoppingCartIcon, UserCircleIcon } from '@heroicons/react/solid'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 
 
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
+
+
+
+    const handleSignout = () => {
+        signOut(auth);
+    }
+
     return (
-        <div>
+        <div className='nav-bar-container sticky-md-top bg-white'>
             <Navbar collapseOnSelect expand="lg" className='shadow-sm' variant="light">
                 <Container>
                     <Link className='nav-logo' to='/'><Navbar.Brand> Delicious Babe </Navbar.Brand></Link>
@@ -30,7 +41,11 @@ const Header = () => {
 
                         <Nav className='text-center align-items-center'>
                             <p className='mb-0 me-3'><ShoppingCartIcon className='text-gray' width={18}></ShoppingCartIcon></p>
-                            <CustomLink id="RouterNavLink" to='/login'>LOGIN</CustomLink>
+                            {
+                                user ? 
+                                <button onClick={handleSignout} className='signout-btn'>Sign out</button>    
+                                
+                                : <CustomLink id="RouterNavLink" to='/login'>LOGIN</CustomLink>}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

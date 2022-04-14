@@ -15,13 +15,14 @@ const Signup = () => {
             <div className='form-container'>
                 <h2 className='text-center mb-5 fw-bold login-title'>Please Sign up</h2>
                 <Form >
+                    <Form.Group className="mb-3" controlId="formBasicName">
+                        <Form.Control  required type="text" placeholder="Your name" />
+                    </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        {/* <Form.Label>Email address</Form.Label> */}
                         <Form.Control  required type="email" placeholder="Enter email" />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        {/* <Form.Label>Password</Form.Label> */}
                         <Form.Control  required type="password" placeholder="Password" />
                     </Form.Group>
                     {/* {errorElement} */}
