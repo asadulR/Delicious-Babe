@@ -28,7 +28,7 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto align-items-center">
                             <CustomLink className='mx-3' to='/home'>HOME</CustomLink>
-                            <CustomLink className='mx-3' to='/menu'>MENU</CustomLink>
+                            <CustomLink className='mx-3' to='/menu/cheese'>MENU</CustomLink>
                             <CustomLink to='/blog'>BLOG</CustomLink>
                             <NavDropdown className='mx-3' title="PAGES" id="collasible-nav-dropdown">
                                 <NavDropdown.Item >Action</NavDropdown.Item>

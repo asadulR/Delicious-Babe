@@ -1,0 +1,45 @@
+.tab-link{
+    font-weight: 600;
+    font-size: 15px;
+    margin: 40px 0;
+}
+/* 
+.menu-container{
+    background-image: url('../../images/menu-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} */
+
+/* .lightgray{
+    color: lightgray;
+} */
+
+
+.salmon{
+    color: salmon;
+}
+.salmon2{
+    color: rgb(201, 84, 71);
+}
+.salmon3{
+    color: rgb(153, 66, 56);
+}
+.custom-border{
+    border-right: 2px solid lightgray;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    
+    .custom-border{
+        border: none;
+    }
+
+
+
+
+
+  }
