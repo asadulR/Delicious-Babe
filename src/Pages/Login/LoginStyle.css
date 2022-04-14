@@ -1,0 +1,39 @@
+.form-container {
+    max-width: 500px;
+    margin: 100px auto;
+    box-shadow: 2px 2px 8px   gray;
+    padding: 50px 50px;
+    border-radius: 8px;
+}
+
+.login-title{
+    color: rgb(71, 65, 65);
+}
+
+.login-btn{
+    width: 90%;
+    border: none;
+    background: linear-gradient(25deg, #F67280, #e67de0);
+}
+
+.login-btn:hover{
+    background: linear-gradient(25deg, #1FAB89, #62D2A2);
+
+}
+
+.signup-link{
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #1806b4;
+    cursor: pointer;
+}
+
+.pointer{
+    cursor: pointer;
+    color: #F67280;
+}
+
+.pointer:hover{
+    text-decoration: underline;
+}

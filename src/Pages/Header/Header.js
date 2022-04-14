@@ -15,25 +15,22 @@ const Header = () => {
                     <Link className='nav-logo' to='/'><Navbar.Brand> Delicious Babe </Navbar.Brand></Link>
                     <Navbar.Toggle className='text-white' aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link ><CustomLink to='/home'>HOME</CustomLink></Nav.Link>
-                            <Nav.Link> <CustomLink to='/menu'>MENU</CustomLink></Nav.Link>
-                            <NavDropdown title="PAGES" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                        <Nav className="me-auto align-items-center">
+                            <CustomLink className='mx-3' to='/home'>HOME</CustomLink>
+                            <CustomLink className='mx-3' to='/menu'>MENU</CustomLink>
+                            <CustomLink to='/blog'>BLOG</CustomLink>
+                            <NavDropdown className='mx-3' title="PAGES" id="collasible-nav-dropdown">
+                                <NavDropdown.Item >Action</NavDropdown.Item>
+                                <NavDropdown.Item >Another action</NavDropdown.Item>
+                                <NavDropdown.Item >Something</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                <NavDropdown.Item >Separated link</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link> <CustomLink to='/blog'>BLOG</CustomLink></Nav.Link>
                         </Nav>
-                        
-                        <ShoppingCartIcon className='text-gray' width={18}></ShoppingCartIcon>
-                        <Nav>
-                    
-                            <Nav.Link>
-                                <CustomLink to='login'>LOGIN</CustomLink>
-                            </Nav.Link>
+
+                        <Nav className='text-center align-items-center'>
+                            <p className='mb-0 me-3'><ShoppingCartIcon className='text-gray' width={18}></ShoppingCartIcon></p>
+                            <CustomLink id="RouterNavLink" to='/login'>LOGIN</CustomLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
