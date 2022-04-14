@@ -1,0 +1,29 @@
+.story-div{
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.story-div>p{
+    margin-bottom: 5px;
+}
+.story-div h2 {
+    font-size: 4rem;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+    .story-div h2 {
+        font-size: 2rem;
+    }
+    
+
+
+
+
+
+}
