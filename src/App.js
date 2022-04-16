@@ -1,5 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import RequireAuth from './Auth/RequireAuth';
+import About from './Pages/About/About';
+import Blog from './Pages/Blog/Blog';
 import Header from './Pages/Header/Header';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
@@ -19,20 +22,30 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/home' element={<Home/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
-        <Route path='/signup' element={<Signup/>}></Route>
-        <Route path='/menu' element={<Menu/>}>
-          <Route path='cheese' element={<Cheese/>}></Route>
-          <Route path='bruschetti' element={<Bruschetti/>}></Route>
-          <Route path='vegetables' element={<Vegetables/>}></Route>
-          <Route path='snacks' element={<Snacks/>}></Route>
-          <Route path='all-time-best' element={<AllTimeBest/>}></Route>
-          <Route path='family-meal' element={<Meal/>}></Route>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/signup' element={<Signup />}></Route>
+        <Route path='/menu' element={<Menu />}>
+          <Route path='cheese' element={<Cheese />}></Route>
+          <Route path='bruschetti' element={<Bruschetti />}></Route>
+          <Route path='vegetables' element={
+            <RequireAuth>
+              <Vegetables />
+            </RequireAuth>
+          }></Route>
+          <Route path='snacks' element={<Snacks />}></Route>
+          <Route path='all-time-best' element={<AllTimeBest />}></Route>
+          <Route path='family-meal' element={<Meal />}></Route>
         </Route>
+        <Route path='about' element={
+          <RequireAuth>
+            <About />
+          </RequireAuth>
+        }></Route>
+        <Route path='/blog' element={<Blog/>}></Route>
       </Routes>
-      
+
     </>
   );
 }

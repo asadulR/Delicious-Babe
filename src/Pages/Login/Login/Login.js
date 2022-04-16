@@ -1,16 +1,29 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import Loading from '../../../Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 import './../LoginStyle.css';
 const Login = () => {
     const navigate = useNavigate();
+    const [user, loading, error] = useAuthState(auth);
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     const handleGoteSignup = () =>{
         navigate('/signup');
     };
 
+    if(loading){
+        return <Loading/>
+    }
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
     return (
         <div className='container'>
             <div className='form-container'>

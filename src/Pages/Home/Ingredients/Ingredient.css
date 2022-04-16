@@ -15,3 +15,14 @@
 .healthyItems{
     background-color: #F9F9FB;
 }
+
+.ingra-btn{
+    background-color: white;
+    transition: 1s;
+}
+
+.ingra-btn:hover{
+    background-color: salmon;
+    color: white;
+    font-weight: 600;
+}
