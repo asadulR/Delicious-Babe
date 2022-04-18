@@ -13,8 +13,6 @@ const Home = () => {
             <Ingredient/>
             <HealthyItems/>
             <Reservations/>
-
-            <h2>I love u</h2>
         </main>
     );
 };

@@ -1,0 +1,25 @@
+footer{
+    background-color: #1B1B1B;
+    padding: 50px 0;
+}
+
+.img-size{
+    width: 36px;
+}
+
+.s-color{
+    color: #0FB8CD;
+}
+
+.my-name-link{
+    text-decoration: none;
+    color: #0FB8CD;
+}
+
+.line{
+    letter-spacing: 1mm;
+    color: white;
+}
+.s-font{
+    font-family: 'Beau Rivage', cursive;
+}

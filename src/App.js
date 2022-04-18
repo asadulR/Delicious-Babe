@@ -3,6 +3,7 @@ import './App.css';
 import RequireAuth from './Auth/RequireAuth';
 import About from './Pages/About/About';
 import Blog from './Pages/Blog/Blog';
+import Footer from './Pages/Footer/Footer';
 import Header from './Pages/Header/Header';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
@@ -14,6 +15,7 @@ import Cheese from './Pages/Menu/Menus/Cheese';
 import Meal from './Pages/Menu/Menus/Meal';
 import Snacks from './Pages/Menu/Menus/Snacks';
 import Vegetables from './Pages/Menu/Menus/Vegetables';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
@@ -44,8 +46,9 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/blog' element={<Blog/>}></Route>
+        <Route path='*' element={<NotFound/>}></Route>
       </Routes>
-
+      <Footer/>
     </>
   );
 }
